@@ -1,0 +1,17 @@
+{
+  "name": "case-fit-desk",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Case Fit Desk — eurorack case fit checker agent powered by Sanity Context MCP",
+  "workspaces": ["apps/*"],
+  "scripts": {
+    "dev": "npm run dev --workspace=apps/web",
+    "dev:studio": "npm run dev --workspace=apps/studio",
+    "build": "npm run build --workspace=apps/web",
+    "build:studio": "npm run build --workspace=apps/studio",
+    "seed:validate": "node scripts/validate-seed.mjs",
+    "lint": "npm run lint --workspace=apps/web --if-present"
+  },
+  "engines": {"node": ">=20.19"},
+  "license": "MIT"
+}
