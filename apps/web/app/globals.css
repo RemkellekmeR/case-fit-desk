@@ -1,0 +1,175 @@
+:root {
+  color-scheme: dark;
+  --bg: #0c0f14;
+  --panel: #141a24;
+  --panel-2: #1a2230;
+  --border: #2a3548;
+  --text: #e8eef8;
+  --muted: #9aa8bd;
+  --accent: #7ee0c3;
+  --accent-2: #8ab4ff;
+  --pass: #3dd68c;
+  --fail: #ff6b7a;
+  --warn: #f5c542;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --sans: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  min-height: 100%;
+  background:
+    radial-gradient(1200px 600px at 10% -10%, #1a2a3f 0%, transparent 55%),
+    radial-gradient(900px 500px at 100% 0%, #16352f 0%, transparent 50%),
+    var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+}
+
+a { color: var(--accent-2); }
+button, textarea, input { font: inherit; }
+
+.app-shell {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 3rem;
+}
+
+.hero {
+  display: grid;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+.hero h1 {
+  margin: 0;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  letter-spacing: -0.02em;
+}
+.hero p { margin: 0; color: var(--muted); max-width: 60ch; line-height: 1.5; }
+.badge-row { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.badge {
+  border: 1px solid var(--border);
+  background: var(--panel);
+  color: var(--muted);
+  border-radius: 999px;
+  padding: 0.25rem 0.7rem;
+  font-size: 0.8rem;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 1rem;
+}
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; }
+}
+
+.panel {
+  background: color-mix(in oklab, var(--panel) 92%, black);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  min-height: 520px;
+  display: flex;
+  flex-direction: column;
+}
+.panel-header {
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--panel-2);
+  font-weight: 600;
+}
+.panel-body { padding: 1rem; flex: 1; overflow: auto; }
+
+.chat-messages { display: grid; gap: 0.85rem; }
+.bubble {
+  border-radius: 12px;
+  padding: 0.75rem 0.9rem;
+  line-height: 1.45;
+  white-space: pre-wrap;
+  border: 1px solid var(--border);
+}
+.bubble.user { background: #1c2740; }
+.bubble.assistant { background: #121820; }
+.bubble .role {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin-bottom: 0.35rem;
+}
+
+.composer {
+  display: grid;
+  gap: 0.6rem;
+  padding: 0.9rem;
+  border-top: 1px solid var(--border);
+  background: var(--panel-2);
+}
+.composer textarea {
+  width: 100%;
+  min-height: 88px;
+  resize: vertical;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #0e141d;
+  color: var(--text);
+  padding: 0.7rem 0.8rem;
+}
+.composer-row { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.composer button, .chip {
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #102018;
+  color: var(--accent);
+  padding: 0.55rem 0.9rem;
+  cursor: pointer;
+}
+.composer button.primary {
+  background: linear-gradient(135deg, #1d6b55, #2a8f6f);
+  color: white;
+  border-color: #2f9d7c;
+}
+.composer button:disabled { opacity: 0.5; cursor: not-allowed; }
+.chip { background: #151c28; color: var(--muted); font-size: 0.82rem; }
+
+.verdict {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.85rem;
+  background: #10161f;
+  margin-bottom: 0.75rem;
+}
+.verdict.pass { border-color: color-mix(in oklab, var(--pass) 50%, var(--border)); }
+.verdict.fail { border-color: color-mix(in oklab, var(--fail) 50%, var(--border)); }
+.verdict.warn { border-color: color-mix(in oklab, var(--warn) 50%, var(--border)); }
+.verdict h3 { margin: 0 0 0.4rem; font-size: 1rem; }
+.verdict .status {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  padding: 0.15rem 0.45rem;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+.verdict.pass .status { background: #123525; color: var(--pass); }
+.verdict.fail .status { background: #3a1520; color: var(--fail); }
+.verdict.warn .status { background: #3a3010; color: var(--warn); }
+.metric-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.4rem 0.75rem;
+  font-size: 0.88rem;
+}
+.metric span { color: var(--muted); }
+.citations {
+  margin-top: 0.65rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+.citations code { color: var(--accent-2); font-family: var(--mono); }
+
+.hint-list { margin: 0; padding-left: 1.1rem; color: var(--muted); line-height: 1.5; }
+.footer-note { margin-top: 1rem; color: var(--muted); font-size: 0.85rem; }
