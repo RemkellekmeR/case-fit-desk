@@ -11,7 +11,7 @@ export default function HomePage() {
         </div>
         <h1>Case Fit Desk</h1>
         <p>
-          Before you buy another module, ask whether it fits <em>your</em> case — HP remaining,
+          Before you buy another module, ask whether it fits <em>your</em> case - HP remaining,
           depth after the rails, power milliamps, and known incompatible neighbors. Numbers come
           from Sanity structured content; the agent refuses to invent specs.
         </p>
