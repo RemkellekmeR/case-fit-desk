@@ -6,4 +6,7 @@ const dataset = process.env.SANITY_STUDIO_DATASET || process.env.NEXT_PUBLIC_SAN
 export default defineCliConfig({
   api: {projectId, dataset},
   studioHost: 'case-fit-desk',
+  deployment: {
+    appId: 'izxgchck7pcyb3el1kt8yi1j',
+  },
 })
