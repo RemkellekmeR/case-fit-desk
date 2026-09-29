@@ -18,8 +18,8 @@ export default function HomePage() {
       </header>
       <Chat />
       <p className="footer-note">
-        Server-side Sanity Context MCP only. See README / HANDOFF.md for Studio deploy, seed import,
-        dual MCP endpoints, and Vercel env vars.
+        Sanity Context MCP when configured; otherwise Demo (seed data) / POST /api/fit uses monorepo
+        seed JSON. See README / HANDOFF.md for Studio deploy, dual MCP endpoints, and Vercel env vars.
       </p>
     </main>
   )
