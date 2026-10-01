@@ -19,12 +19,12 @@ Before buying another module, ask if it fits *your* case. Sanity Context MCP que
 | Field | Value |
 | --- | --- |
 | GitHub repo | https://github.com/RemkellekmeR/case-fit-desk |
-| Live agent URL | _TODO: Vercel URL_ |
-| Sanity project ID | _TODO_ |
-| Public dataset URL | _TODO: https://\<projectId\>.api.sanity.io/v2021-06-07/data/query/production?query=*%5B0%5D_ |
-| Deployed Studio | _TODO: https://case-fit-desk.sanity.studio_ |
-| Context MCP (GROQ) | _TODO: endpoint name / org (no token)_ |
-| Context MCP (KB) | _TODO_ |
+| Live agent URL | _TODO: Vercel URL (blocked on Remmy LLM key + deploy)_ |
+| Sanity project ID | `fdonr7im` |
+| Public dataset URL | https://fdonr7im.api.sanity.io/v2021-06-07/data/query/production?query=*%5B_type%20==%20%22module%22%5D%5B0...3%5D%7Bname%2Chp%2CdepthMm%7D |
+| Deployed Studio | https://case-fit-desk.sanity.studio/ |
+| Context MCP (GROQ) | `case-fit-groq` (Sanity Context org Morgan Kael / `opyik8jmg`) — endpoint URL in private env only |
+| Context MCP (KB) | `case-fit-kb` (KB-only MCP; same org) — endpoint URL in private env only |
 
 ## Description
 
