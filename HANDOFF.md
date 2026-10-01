@@ -103,44 +103,44 @@ Expect: **fail** on depth (51 > 38), citations to Sanity ids, optional KB notes 
 1. Import `RemkellekmeR/case-fit-desk`
 2. Root Directory: leave repo root; Build Command: `npm run build --workspace=apps/web`; Output: Next default for `apps/web`  
    **or** set Root Directory to `apps/web` and install from workspace carefully.
-3. Add all server env vars from `.env.example`.
-4. Deploy. Paste public URL into `SUBMISSION.md`.
+3. Add all server env vars from `.env.example` (see also `VERCEL.md`).
+4. Deploy. Paste public URL into `SUBMISSION.md` / `DEV_POST.md` as **LIVE_URL**.
 
 ### G. DEV.to (Remmy only — do not automate)
 
-Fill `SUBMISSION.md`, publish with tag `#sanitychallenge`. Include:
+Paste from `DEV_POST.md`, publish with tag `#sanitychallenge` only after Remmy explicitly says Publish. Include:
 
 - Sanity project ID and/or public dataset URL
 - Deployed Studio URL
-- Agent / app URL
+- Agent / app URL (**LIVE_URL**)
 - Short note that Context uses **two** MCP endpoints (GROQ + KB)
 
 ## Contest checklist
 
-- [ ] Public GitHub repo
-- [ ] Public Sanity dataset + deployed Studio
-- [ ] Schema deployed (`sanity schema deploy`)
-- [ ] Context enabled + org Context Viewer token
-- [ ] GROQ MCP endpoint working
-- [ ] KB built + KB-only MCP endpoint working
+- [x] Public GitHub repo
+- [x] Public Sanity dataset + deployed Studio
+- [x] Schema deployed (`sanity schema deploy`)
+- [x] Context enabled + org Context Viewer token
+- [x] GROQ MCP endpoint working
+- [x] KB built + KB-only MCP endpoint working
 - [ ] Agent deployed; demo prompts work
-- [ ] SUBMISSION.md filled; DEV post published by Remmy
-- [ ] No secrets in git
+- [ ] SUBMISSION.md / DEV_POST.md LIVE_URL filled; DEV post published by Remmy
+- [x] No secrets in git
 
 ## What the executor already did
 
 - Scaffolded monorepo (Studio schemas, Next agent, seed, KB markdown, docs)
 - Created public GitHub repo
 - Validated seed JSON structure (`npm run seed:validate`)
+- Filled Sanity IDs in SUBMISSION; added paste-ready DEV_POST.md + VERCEL.md
 
 ## What remains blocked without Remmy
 
-- Sanity project creation / login
-- Context Labs enablement + org token
-- Real MCP URLs
-- LLM API key
-- Vercel production deploy
-- DEV.to submission
+- LLM API key (OpenAI / Anthropic / Gemini)
+- Vercel production deploy (wiring documented in `VERCEL.md`; secrets only in Vercel UI / local `.env.local`)
+- Explicit **Publish** on DEV.to (`DEV_POST.md` is paste-ready once LIVE_URL is real)
+
+Already done on Builder rails: public repo, Sanity project `fdonr7im`, Studio, seeded public dataset, Context MCPs + org token in local env, SUBMISSION.md IDs filled.
 
 ## Sync note (executor → Remmy)
 
