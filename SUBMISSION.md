@@ -1,8 +1,11 @@
 # Sanity Challenge — Path One submission draft
 
-**Do not publish until Remmy fills placeholders and reviews.**  
+**Do not publish until Remmy reviews and explicitly says Publish.**  
+Paste-ready body also in `DEV_POST.md`.  
 Tag: `#sanitychallenge`  
-Template inspiration: contest Path One prompt on https://dev.to/challenges/sanity-2026-09-16
+Contest: https://dev.to/challenges/sanity-2026-09-16
+
+Placeholders still open: **LIVE_URL** (Vercel), **TODO_DEV_HANDLE**, Remmy Publish yes.
 
 ---
 
@@ -19,7 +22,7 @@ Before buying another module, ask if it fits *your* case. Sanity Context MCP que
 | Field | Value |
 | --- | --- |
 | GitHub repo | https://github.com/RemkellekmeR/case-fit-desk |
-| Live agent URL | _TODO: Vercel URL (blocked on Remmy LLM key + deploy)_ |
+| Live agent URL | **LIVE_URL** ← Remmy LLM key + Vercel deploy, then paste here |
 | Sanity project ID | `fdonr7im` |
 | Public dataset URL | https://fdonr7im.api.sanity.io/v2021-06-07/data/query/production?query=*%5B_type%20==%20%22module%22%5D%5B0...3%5D%7Bname%2Chp%2CdepthMm%7D |
 | Deployed Studio | https://case-fit-desk.sanity.studio/ |
@@ -64,7 +67,7 @@ Next.js App Router, Vercel AI SDK (`ai@6`, `@ai-sdk/mcp@1`), Sanity Studio, Open
 
 ## Team
 
-- Remmy / Jamey Kael — _TODO DEV handles_
+- Remmy / Morgan Kael — DEV handle: **TODO_DEV_HANDLE**
 
 ## Notes / honesty
 
