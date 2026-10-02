@@ -31,5 +31,5 @@ export function getModel(): LanguageModel {
   if (!process.env.GOOGLE_GENERATIVE_AI_API_KEY && process.env.GEMINI_API_KEY) {
     process.env.GOOGLE_GENERATIVE_AI_API_KEY = process.env.GEMINI_API_KEY
   }
-  return google(process.env.GOOGLE_MODEL || 'gemini-2.5-flash')
+  return google(process.env.GOOGLE_MODEL || 'gemini-3.8-flash')
 }
