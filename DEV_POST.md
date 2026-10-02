@@ -1,9 +1,9 @@
 # Paste-ready DEV.to draft — Sanity Challenge Path One
 
-**Remmy: review, replace LIVE_URL + your DEV handle, then Publish yourself.**  
+**Remmy: review, add your DEV handle, then Publish yourself.**  
 Tag required: `#sanitychallenge`  
 Contest: https://dev.to/challenges/sanity-2026-09-16  
-Do **not** publish until LIVE_URL is real and Remmy explicitly says to Publish.
+Do **not** publish until Remmy explicitly says to Publish.
 
 ---
 
@@ -37,14 +37,14 @@ Structured depth stays authoritative when the KB conflicts.
 | | |
 | --- | --- |
 | GitHub | https://github.com/RemkellekmeR/case-fit-desk |
-| Live agent | **LIVE_URL** ← replace after Vercel deploy |
+| Live agent | https://case-fit-desk.vercel.app |
 | Sanity project ID | `fdonr7im` |
 | Public dataset (sample query) | https://fdonr7im.api.sanity.io/v2021-06-07/data/query/production?query=*%5B_type%20==%20%22module%22%5D%5B0...3%5D%7Bname%2Chp%2CdepthMm%7D |
 | Studio | https://case-fit-desk.sanity.studio/ |
 
 ### How to test (judges)
 
-1. Open **LIVE_URL**.
+1. Open https://case-fit-desk.vercel.app.
 2. Ask: “Will Expert Sleepers FH-2 fit in the Make Noise 104HP skiff?”  
    Expect **fail** on depth (51mm vs 38mm) with Sanity citations.
 3. Ask to compare store listing vs manual depth — KB should surface the contradiction; structured data wins.
@@ -74,6 +74,6 @@ Scaffolded with AI agents; schema, seed, KB contradiction, and “never invent s
 
 ## Remmy Publish gate
 
-- [ ] LIVE_URL replaced with real Vercel URL  
+- [x] LIVE_URL set: https://case-fit-desk.vercel.app  
 - [ ] DEV handle filled  
 - [ ] Remmy explicitly said **Publish** (Builder will not publish for you)

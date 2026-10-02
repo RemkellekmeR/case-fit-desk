@@ -5,7 +5,7 @@ Paste-ready body also in `DEV_POST.md`.
 Tag: `#sanitychallenge`  
 Contest: https://dev.to/challenges/sanity-2026-09-16
 
-Placeholders still open: **LIVE_URL** (Vercel), **TODO_DEV_HANDLE**, Remmy Publish yes.
+LIVE_URL set: https://case-fit-desk.vercel.app. Still open: **TODO_DEV_HANDLE**, Remmy Publish yes.
 
 ---
 
@@ -22,7 +22,7 @@ Before buying another module, ask if it fits *your* case. Sanity Context MCP que
 | Field | Value |
 | --- | --- |
 | GitHub repo | https://github.com/RemkellekmeR/case-fit-desk |
-| Live agent URL | **LIVE_URL** ← Remmy LLM key + Vercel deploy, then paste here |
+| Live agent URL | https://case-fit-desk.vercel.app |
 | Sanity project ID | `fdonr7im` |
 | Public dataset URL | https://fdonr7im.api.sanity.io/v2021-06-07/data/query/production?query=*%5B_type%20==%20%22module%22%5D%5B0...3%5D%7Bname%2Chp%2CdepthMm%7D |
 | Deployed Studio | https://case-fit-desk.sanity.studio/ |
